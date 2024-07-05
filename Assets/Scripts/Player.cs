@@ -5,15 +5,29 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    [SerializeField] float moveSpeed = 5f;
+    Vector2 moveInput;
+    Rigidbody2D playerRigidbody;
     void Start()
     {
-        
+        playerRigidbody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        Walk();
+    }
+
+    void OnMove(InputValue value){
+        moveInput = value.Get<Vector2>();
+        Debug.Log(moveInput);
+    }
+
+    void Walk(){
         
+        Vector2 playerVelocity = new Vector2(moveInput.x * moveSpeed, moveInput.y * moveSpeed);
+        playerRigidbody.velocity = playerVelocity;
+
     }
 }

@@ -8,15 +8,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Player
+  - 
   - Water
   - UI
+  - Player
   - Gate
   - Switch
   - Input
   - Npc
-  - Border
-  - 
+  - Walls
   - 
   - 
   - 
