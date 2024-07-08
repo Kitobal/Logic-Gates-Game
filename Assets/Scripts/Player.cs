@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
     bool isMoving;
+    GameObject collidingObject;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -25,7 +26,7 @@ public class Player : MonoBehaviour
 
     void OnMove(InputValue value){
         moveInput = value.Get<Vector2>();
-        Debug.Log(moveInput);
+        //Debug.Log(moveInput);
     }
 
     void Walk(){
@@ -45,6 +46,22 @@ public class Player : MonoBehaviour
         if (isMoving){
             playerAnimator.SetFloat("X",moveInput.x);
             playerAnimator.SetFloat("Y",moveInput.y);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D other) {
+        collidingObject = other.gameObject;
+    }
+
+    private void OnCollisionExit2D(Collision2D other) {
+        collidingObject = null;
+    }
+
+    void OnInteract(){
+        if (collidingObject != null){
+            if (collidingObject.layer == 8){ //Layer of Switch
+                collidingObject.GetComponent<Switch>().ChangeOutput();
+            }
         }
     }
 }
