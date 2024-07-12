@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class Player : MonoBehaviour
     Rigidbody2D playerRigidbody;
     bool isMoving;
     GameObject collidingObject;
+
+    public String selectedGate = "Buffer";
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -60,7 +63,17 @@ public class Player : MonoBehaviour
     void OnInteract(){
         if (collidingObject != null){
             if (collidingObject.layer == 8){ //Layer of Switch
+                playerAnimator.SetTrigger("Interact");
                 collidingObject.GetComponent<Switch>().ChangeOutput();
+            }
+            if (collidingObject.layer == 7){ //Layer of Gate Type 1 (1 input)
+                playerAnimator.SetTrigger("Interact");
+                if (collidingObject.GetComponent<GateType1>().activeGate == "Empty"){
+                    collidingObject.GetComponent<GateType1>().SetActiveGate(selectedGate);
+                } else {
+                    collidingObject.GetComponent<GateType1>().RemoveActiveGate();
+                }
+                
             }
         }
     }
