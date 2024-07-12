@@ -140,3 +140,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   falseSprite: {fileID: -318164650, guid: 9923986100da64b47a832359c90165cc, type: 3}
   trueSprite: {fileID: 301073472, guid: 9923986100da64b47a832359c90165cc, type: 3}
+  switchSFX: {fileID: 8300000, guid: cc3afae0486f49741a85955a63349fc0, type: 3}
+  sfxVolume: 1

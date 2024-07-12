@@ -6,6 +6,8 @@ public class Switch : MonoBehaviour
 {
     [SerializeField] Sprite falseSprite;
     [SerializeField] Sprite trueSprite;
+    [SerializeField] AudioClip switchSFX;
+    [SerializeField] float sfxVolume = 1;
     Output myOutput;
     SpriteRenderer mySpriterenderer;
 
@@ -27,6 +29,7 @@ public class Switch : MonoBehaviour
         }
     }
     public void ChangeOutput(){
+        AudioSource.PlayClipAtPoint(switchSFX, Camera.main.transform.position,sfxVolume);
         if (myOutput.output == true){
             myOutput.output = false;
         } else {
@@ -34,9 +37,5 @@ public class Switch : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter2D(Collision2D other) {
-    //    if (other.gameObject.layer == 6){ // La capa 6 es la capa del Jugador
-    //        ChangeOutput();
-    //    }
-    //}
+
 }

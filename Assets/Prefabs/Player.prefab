@@ -169,6 +169,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  gateSet: {fileID: 8300000, guid: b146af64a927a764eb2a8169901823b6, type: 3}
+  gateRemove: {fileID: 8300000, guid: 1def5169217a24d4597cc874d710d96a, type: 3}
+  wrongSound: {fileID: 8300000, guid: f1822e52bc6a34a42a46a22869edd138, type: 3}
+  sfxVolume: 1
+  selectedGate: Buffer
 --- !u!95 &2038680131347146661
 Animator:
   serializedVersion: 4

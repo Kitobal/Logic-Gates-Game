@@ -8,17 +8,24 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float moveSpeed = 5f;
+
+    [SerializeField] AudioClip gateSet;
+    [SerializeField] AudioClip gateRemove;
+    [SerializeField] AudioClip wrongSound; //to be used later
+    [SerializeField] float sfxVolume = 1;
     Animator playerAnimator;
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
     bool isMoving;
     GameObject collidingObject;
+    //Door doorObject;
 
     public String selectedGate = "Buffer";
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        //doorObject = FindObjectOfType<Door>();
     }
 
     void Update()
@@ -65,16 +72,19 @@ public class Player : MonoBehaviour
             if (collidingObject.layer == 8){ //Layer of Switch
                 playerAnimator.SetTrigger("Interact");
                 collidingObject.GetComponent<Switch>().ChangeOutput();
-            }
-            if (collidingObject.layer == 7){ //Layer of Gate Type 1 (1 input)
+            } else if (collidingObject.layer == 7){ //Layer of Gate Type 1 (1 input)
                 playerAnimator.SetTrigger("Interact");
                 if (collidingObject.GetComponent<GateType1>().activeGate == "Empty"){
                     collidingObject.GetComponent<GateType1>().SetActiveGate(selectedGate);
+                    AudioSource.PlayClipAtPoint(gateSet, Camera.main.transform.position,sfxVolume);
                 } else {
                     collidingObject.GetComponent<GateType1>().RemoveActiveGate();
+                    AudioSource.PlayClipAtPoint(gateRemove, Camera.main.transform.position,sfxVolume); 
                 }
                 
             }
-        }
+        } 
+            
+        
     }
 }
