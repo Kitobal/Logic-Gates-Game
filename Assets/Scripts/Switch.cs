@@ -15,6 +15,7 @@ public class Switch : MonoBehaviour
     void Start() {
         myOutput = GetComponent<Output>();
         mySpriterenderer = GetComponent<SpriteRenderer>();
+        myOutput.output = false;
     }
     void Update()
     {

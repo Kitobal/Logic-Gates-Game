@@ -35,7 +35,7 @@ public class GateType1 : MonoBehaviour
     public void RemoveActiveGate(){
         activeGate = "Empty";
         mySpriteRenderer.sprite = defaultSprite;
-        myOutput.output = false;
+        myOutput.output = null;
     }
 
     void ChangeOutput(){

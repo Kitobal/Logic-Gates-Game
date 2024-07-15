@@ -124,6 +124,7 @@ MonoBehaviour:
   doorLight: {fileID: 8351194036906972650}
   lightOn: {fileID: 464234779, guid: 9923986100da64b47a832359c90165cc, type: 3}
   lightOff: {fileID: -1421747792, guid: 9923986100da64b47a832359c90165cc, type: 3}
+  lightNull: {fileID: -1612766114, guid: 9923986100da64b47a832359c90165cc, type: 3}
   doorSFX: {fileID: 8300000, guid: 9a9da543e7eed434f8cacdf5884a1fea, type: 3}
   sfxVolume: 1
 --- !u!61 &1959432616938638031

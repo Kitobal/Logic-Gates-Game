@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Output : MonoBehaviour
 {
-    public bool output;
+    public bool? output = null;
 }
