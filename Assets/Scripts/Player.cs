@@ -21,11 +21,12 @@ public class Player : MonoBehaviour
     //Door doorObject;
 
     public String selectedGate = "Buffer";
+    LevelManager myLevelManager;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        //doorObject = FindObjectOfType<Door>();
+        myLevelManager = FindObjectOfType<LevelManager>();
     }
 
     void Update()
@@ -86,5 +87,13 @@ public class Player : MonoBehaviour
         } 
             
         
+    }
+
+    void OnChangeSelectionRight(){
+        myLevelManager.MoveSelectionRight();
+    }
+
+    void OnChangeSelectionLeft(){
+        myLevelManager.MoveSelectionLeft();
     }
 }
