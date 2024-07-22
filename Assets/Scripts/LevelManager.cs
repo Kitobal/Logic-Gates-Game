@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -15,6 +17,11 @@ public class LevelManager : MonoBehaviour
     public Image[] gateIcons;
     public Image[] selectedFrames;
     public int selectionIndex = 0;
+    [SerializeField] TextMeshProUGUI screenPrompt;
+    string  noInteractKeyString= "Seleccionar<sprite name=\"Key_C\">o<sprite name=\"Key_V\">";
+    string yesInteractKeyString = "Interactuar<sprite name=\"Key_Space\">\nSeleccionar<sprite name=\"Key_C\">o<sprite name=\"Key_V\">";
+    string  noInteractXboxString= "Seleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
+    string yesInteractXboxString = "Interactuar<sprite name=\"Xbox_A\">\nSeleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
     void Awake()
     {
         int numLevelManagers = FindObjectsOfType<LevelManager>().Length;
@@ -82,6 +89,21 @@ public class LevelManager : MonoBehaviour
             } else {
                 gateIcons[i].enabled = false;
                 selectedFrames[i].enabled = false;
+            }
+        }
+    }
+    public void UpdateScreenPrompt(bool interact, string device){
+        if (device == "Gamepad"){
+            if (interact){
+                screenPrompt.text = yesInteractXboxString;
+            } else {
+                screenPrompt.text = noInteractXboxString;
+            }
+        } else {
+            if (interact){
+                screenPrompt.text = yesInteractKeyString;
+            } else {
+                screenPrompt.text = noInteractKeyString;
             }
         }
     }

@@ -16,28 +16,35 @@ public class Player : MonoBehaviour
     Animator playerAnimator;
     Vector2 moveInput;
     Rigidbody2D playerRigidbody;
+
+    PlayerInput myPlayerInput;
     bool isMoving;
-    GameObject collidingObject;
-    //Door doorObject;
+    GameObject collidingObject = null;
+    Door doorObject;
 
     public String selectedGate = "Buffer";
     LevelManager myLevelManager;
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        myPlayerInput = GetComponent<PlayerInput>();
         myLevelManager = FindObjectOfType<LevelManager>();
+        doorObject = FindObjectOfType<Door>();
+        UpdatePrompts();
     }
 
     void Update()
     {
         Walk();
         Animate();
+        
     }
 
     void OnMove(InputValue value){
         moveInput = value.Get<Vector2>();
-        //Debug.Log(moveInput);
+        UpdatePrompts();
     }
 
     void Walk(){
@@ -61,11 +68,16 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionStay2D(Collision2D other) {
-        collidingObject = other.gameObject;
+        if (other.gameObject.layer != 11){
+            collidingObject = other.gameObject;
+            UpdatePrompts();
+        }
+        
     }
 
     private void OnCollisionExit2D(Collision2D other) {
         collidingObject = null;
+        UpdatePrompts();
     }
 
     void OnInteract(){
@@ -84,6 +96,7 @@ public class Player : MonoBehaviour
                 }
                 
             }
+            doorObject.CheckOutput();
         } 
             
         
@@ -91,9 +104,20 @@ public class Player : MonoBehaviour
 
     void OnChangeSelectionRight(){
         myLevelManager.MoveSelectionRight();
+        UpdatePrompts();
     }
 
     void OnChangeSelectionLeft(){
         myLevelManager.MoveSelectionLeft();
+        UpdatePrompts();
+    }
+
+    
+    void UpdatePrompts(){
+        if (collidingObject != null){
+            myLevelManager.UpdateScreenPrompt(true,myPlayerInput.currentControlScheme);
+        } else {
+            myLevelManager.UpdateScreenPrompt(false,myPlayerInput.currentControlScheme);
+        }
     }
 }

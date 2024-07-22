@@ -18,13 +18,19 @@ public class Door : MonoBehaviour
     {
         myAnimator = GetComponent<Animator>();
         myCollider = GetComponent<BoxCollider2D>();
-    }
-
-    void Update(){
         CheckOutput();
     }
 
+    void Update(){
+  
+    }
+
     public void CheckOutput(){
+        StartCoroutine(UpdateOutput());  
+    }
+
+    IEnumerator UpdateOutput(){
+        yield return new WaitForSeconds(0.2f);
         if (input != null){
             finalOutput = input.GetComponent<Output>().output;
             if (finalOutput != null){
@@ -32,7 +38,7 @@ public class Door : MonoBehaviour
                 myAnimator.SetBool("isOpen",true);
                 myCollider.enabled = false;
                 doorLight.GetComponent<SpriteRenderer>().sprite = lightOn;
-                //AudioSource.PlayClipAtPoint(doorSFX, Camera.main.transform.position,sfxVolume);   
+                AudioSource.PlayClipAtPoint(doorSFX, Camera.main.transform.position,sfxVolume);   
                 } else {
                 myAnimator.SetBool("isOpen",false);
                 myCollider.enabled = true;
@@ -42,7 +48,6 @@ public class Door : MonoBehaviour
                 doorLight.GetComponent<SpriteRenderer>().sprite = lightNull;   
             }
         }
-            
     }
 
 
