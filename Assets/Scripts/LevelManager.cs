@@ -22,17 +22,7 @@ public class LevelManager : MonoBehaviour
     string yesInteractKeyString = "Interactuar<sprite name=\"Key_Space\">\nSeleccionar<sprite name=\"Key_C\">o<sprite name=\"Key_V\">";
     string  noInteractXboxString= "Seleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
     string yesInteractXboxString = "Interactuar<sprite name=\"Xbox_A\">\nSeleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
-    void Awake()
-    {
-        int numLevelManagers = FindObjectsOfType<LevelManager>().Length;
-        if (numLevelManagers  > 1){
-            Destroy(gameObject);
-            return;
-        } else {
-            DontDestroyOnLoad(gameObject);
-        }
-        //add here destory game object if on game over screen
-    }   
+    
     void Start()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;

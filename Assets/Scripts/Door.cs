@@ -14,10 +14,15 @@ public class Door : MonoBehaviour
     public bool? finalOutput;
     Animator myAnimator;
     Collider2D myCollider;
+
+    Player playerObject;
+    Npc npcObject;
     void Start()
     {
         myAnimator = GetComponent<Animator>();
         myCollider = GetComponent<BoxCollider2D>();
+        playerObject = FindObjectOfType<Player>();
+        npcObject = FindObjectOfType<Npc>();
         CheckOutput();
     }
 
@@ -38,7 +43,9 @@ public class Door : MonoBehaviour
                 myAnimator.SetBool("isOpen",true);
                 myCollider.enabled = false;
                 doorLight.GetComponent<SpriteRenderer>().sprite = lightOn;
-                AudioSource.PlayClipAtPoint(doorSFX, Camera.main.transform.position,sfxVolume);   
+                playerObject.SetCanInteract(false);
+                AudioSource.PlayClipAtPoint(doorSFX, Camera.main.transform.position,sfxVolume);
+                npcObject.ChangeSprite();   
                 } else {
                 myAnimator.SetBool("isOpen",false);
                 myCollider.enabled = true;

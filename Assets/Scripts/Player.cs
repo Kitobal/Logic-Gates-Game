@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
     public String selectedGate = "Buffer";
     LevelManager myLevelManager;
 
+    public bool canMove = true;
+    public bool canInteract = true;
+    
+    public bool canSelect = true;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
@@ -43,8 +47,11 @@ public class Player : MonoBehaviour
     }
 
     void OnMove(InputValue value){
-        moveInput = value.Get<Vector2>();
-        UpdatePrompts();
+        if (canMove == true){
+            moveInput = value.Get<Vector2>();
+            UpdatePrompts();
+        }
+        
     }
 
     void Walk(){
@@ -68,7 +75,7 @@ public class Player : MonoBehaviour
     }
 
     private void OnCollisionStay2D(Collision2D other) {
-        if (other.gameObject.layer != 11){
+        if (other.gameObject.layer != 11 & canInteract){
             collidingObject = other.gameObject;
             UpdatePrompts();
         }
@@ -81,7 +88,7 @@ public class Player : MonoBehaviour
     }
 
     void OnInteract(){
-        if (collidingObject != null){
+        if (collidingObject != null & canInteract){
             if (collidingObject.layer == 8){ //Layer of Switch
                 playerAnimator.SetTrigger("Interact");
                 collidingObject.GetComponent<Switch>().ChangeOutput();
@@ -103,13 +110,19 @@ public class Player : MonoBehaviour
     }
 
     void OnChangeSelectionRight(){
-        myLevelManager.MoveSelectionRight();
-        UpdatePrompts();
+        if (canSelect){
+            myLevelManager.MoveSelectionRight();
+            UpdatePrompts();
+        }
+        
     }
 
     void OnChangeSelectionLeft(){
-        myLevelManager.MoveSelectionLeft();
-        UpdatePrompts();
+        if(canSelect){
+            myLevelManager.MoveSelectionLeft();
+            UpdatePrompts();
+        }
+        
     }
 
     
@@ -119,5 +132,15 @@ public class Player : MonoBehaviour
         } else {
             myLevelManager.UpdateScreenPrompt(false,myPlayerInput.currentControlScheme);
         }
+    }
+
+    public void PlayerNotUsingUI(bool value){
+        canInteract = value;
+        canMove = value;
+        canSelect = value;
+    }
+
+    public void SetCanInteract(bool value){
+        canInteract = value;
     }
 }
