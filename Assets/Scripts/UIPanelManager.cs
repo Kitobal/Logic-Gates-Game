@@ -10,6 +10,12 @@ public class UIPanelManager : MonoBehaviour
 {
     
     [SerializeField] GameObject startingButton;
+    [SerializeField] GameObject nextPanel;
+
+    [SerializeField] AudioClip panelAudioClip;
+    [SerializeField] GameObject dialoguePlayer;
+
+    AudioSource dialogueAudioSource;
 
     Player playerObject;
     
@@ -17,6 +23,10 @@ public class UIPanelManager : MonoBehaviour
     {
         playerObject = FindObjectOfType<Player>();
         EventSystem.current.SetSelectedGameObject(startingButton);
+        dialogueAudioSource = dialoguePlayer.GetComponent<AudioSource>();
+        dialogueAudioSource.clip = panelAudioClip;
+        dialogueAudioSource.PlayDelayed(0.1f);
+        
     }
 
     // Update is called once per frame
@@ -26,7 +36,14 @@ public class UIPanelManager : MonoBehaviour
     }
 
     public void DeactivatePanel(){
+        dialogueAudioSource.Stop();
         playerObject.PlayerNotUsingUI(true);
+        gameObject.SetActive(false); //this game object
+    }
+
+    public void LoadNextPanel(){
+        dialogueAudioSource.Stop();
+        nextPanel.SetActive(true);
         gameObject.SetActive(false); //this game object
     }
 }

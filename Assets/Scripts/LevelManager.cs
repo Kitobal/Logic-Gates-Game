@@ -18,6 +18,7 @@ public class LevelManager : MonoBehaviour
     public Image[] selectedFrames;
     public int selectionIndex = 0;
     [SerializeField] TextMeshProUGUI screenPrompt;
+    [SerializeField] TextMeshProUGUI levelTitle;
     string  noInteractKeyString= "Seleccionar<sprite name=\"Key_C\">o<sprite name=\"Key_V\">";
     string yesInteractKeyString = "Interactuar<sprite name=\"Key_Space\">\nSeleccionar<sprite name=\"Key_C\">o<sprite name=\"Key_V\">";
     string  noInteractXboxString= "Seleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
@@ -27,6 +28,7 @@ public class LevelManager : MonoBehaviour
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         UpdateUnlockedGates();
+        levelTitle.text = "Nivel "+ currentLevel.ToString();
     }
 
     // Update is called once per frame
