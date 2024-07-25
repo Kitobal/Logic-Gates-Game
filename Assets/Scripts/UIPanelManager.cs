@@ -22,6 +22,7 @@ public class UIPanelManager : MonoBehaviour
     void Start()
     {
         playerObject = FindObjectOfType<Player>();
+        playerObject.PlayerNotUsingUI(false);
         EventSystem.current.SetSelectedGameObject(startingButton);
         dialogueAudioSource = dialoguePlayer.GetComponent<AudioSource>();
         dialogueAudioSource.clip = panelAudioClip;

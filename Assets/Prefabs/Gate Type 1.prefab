@@ -103,6 +103,10 @@ MonoBehaviour:
   defaultSprite: {fileID: -148946286, guid: 9923986100da64b47a832359c90165cc, type: 3}
   bufferSprite: {fileID: -1685428577, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
   notSprite: {fileID: 904035026, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
+  gateSet: {fileID: 8300000, guid: b146af64a927a764eb2a8169901823b6, type: 3}
+  gateRemove: {fileID: 8300000, guid: 1def5169217a24d4597cc874d710d96a, type: 3}
+  wrongGateSFX: {fileID: 8300000, guid: f1822e52bc6a34a42a46a22869edd138, type: 3}
+  sfxVolume: 5
   activeGate: Empty
 --- !u!114 &1433091636321469968
 MonoBehaviour:
@@ -116,7 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf51447416dff34d84ac3660b306325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  output: 0
 --- !u!61 &3866427533965619075
 BoxCollider2D:
   m_ObjectHideFlags: 0

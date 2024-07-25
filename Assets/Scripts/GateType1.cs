@@ -9,6 +9,10 @@ public class GateType1 : MonoBehaviour
     [SerializeField] Sprite defaultSprite;
     [SerializeField] Sprite bufferSprite;
     [SerializeField] Sprite notSprite;
+    [SerializeField] AudioClip gateSet;
+    [SerializeField] AudioClip gateRemove;
+    [SerializeField] AudioClip wrongGateSFX;
+    [SerializeField] float sfxVolume = 1f;
     
     public string activeGate = "Empty";
     SpriteRenderer mySpriteRenderer;
@@ -27,13 +31,15 @@ public class GateType1 : MonoBehaviour
     public void SetActiveGate(string name){
         if (name == "Buffer" ||name == "Not" ){
             activeGate = name;
+            AudioSource.PlayClipAtPoint(gateSet, Camera.main.transform.position,sfxVolume);
         } else {
-            //add wrong gate sfx here
+            AudioSource.PlayClipAtPoint(wrongGateSFX, Camera.main.transform.position,sfxVolume);
         }
     }
 
     public void RemoveActiveGate(){
         activeGate = "Empty";
+        AudioSource.PlayClipAtPoint(gateRemove, Camera.main.transform.position,sfxVolume);
         mySpriteRenderer.sprite = defaultSprite;
         myOutput.output = null;
     }
@@ -44,6 +50,10 @@ public class GateType1 : MonoBehaviour
                 mySpriteRenderer.sprite = bufferSprite;
                 //Rules for Buffer gate
                 myOutput.output = inputObject.GetComponent<Output>().output; 
+            } else if (activeGate == "Not"){
+                mySpriteRenderer.sprite = notSprite;
+                //Rules for Not gate
+                myOutput.output = !inputObject.GetComponent<Output>().output;
             }
         }
     }
