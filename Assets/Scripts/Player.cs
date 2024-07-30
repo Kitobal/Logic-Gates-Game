@@ -98,6 +98,13 @@ public class Player : MonoBehaviour
                     collidingObject.GetComponent<GateType1>().RemoveActiveGate();
                 }
                 
+            } else if (collidingObject.layer == 12){ //layer of Gate Type 2 (2 inputs)
+                playerAnimator.SetTrigger("Interact");
+                if (collidingObject.GetComponent<GateType2>().activeGate == "Empty"){
+                    collidingObject.GetComponent<GateType2>().SetActiveGate(selectedGate);
+                } else{
+                    collidingObject.GetComponent<GateType2>().RemoveActiveGate();
+                }
             }
             doorObject.CheckOutput();
         } 
