@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 4565082875599408781}
   - component: {fileID: 4565082875599408780}
   - component: {fileID: 4565082875599408783}
-  - component: {fileID: 3311365344414477911}
+  - component: {fileID: -5510225970035660597}
   m_Layer: 11
-  m_Name: False Input
+  m_Name: Static Input
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baf51447416dff34d84ac3660b306325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3311365344414477911
+--- !u!114 &-5510225970035660597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,6 +124,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 4565082875599408782}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08771dc42b143c0429e383bdec078fa6, type: 3}
+  m_Script: {fileID: 11500000, guid: 967569edcf4daf04d9754a4064afe3ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTrue: 0
+  trueSprite: {fileID: -659063383, guid: 9923986100da64b47a832359c90165cc, type: 3}
+  falseSprite: {fileID: 677015005, guid: 9923986100da64b47a832359c90165cc, type: 3}

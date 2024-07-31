@@ -53,7 +53,12 @@ public class GateType1 : MonoBehaviour
             } else if (activeGate == "Not"){
                 mySpriteRenderer.sprite = notSprite;
                 //Rules for Not gate
-                myOutput.output = !inputObject.GetComponent<Output>().output;
+                if (inputObject.GetComponent<Output>().output == null){
+                    myOutput.output = null;
+                } else {
+                    myOutput.output = !inputObject.GetComponent<Output>().output;
+                }
+                
             }
         }
     }
