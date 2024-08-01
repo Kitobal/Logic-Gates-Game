@@ -26,12 +26,14 @@ public class Player : MonoBehaviour
     public bool canInteract = true;
     
     public bool canSelect = true;
+    Npc myNpc;
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
         myPlayerInput = GetComponent<PlayerInput>();
         myLevelManager = FindObjectOfType<LevelManager>();
+        myNpc = FindObjectOfType<Npc>();
         doorObject = FindObjectOfType<Door>();
         UpdatePrompts();
     }
@@ -105,6 +107,8 @@ public class Player : MonoBehaviour
                 } else{
                     collidingObject.GetComponent<GateType2>().RemoveActiveGate();
                 }
+            } else if (collidingObject.layer == 10){ //layer of npc
+                myNpc.LoadPanel();
             }
             doorObject.CheckOutput();
         } 

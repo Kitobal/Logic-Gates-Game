@@ -32,8 +32,11 @@ public class UIPanelManager : MonoBehaviour
         EventSystem.current.SetSelectedGameObject(startingButton);
         buttonText = startingButton.GetComponentInChildren<TextMeshProUGUI>();
         dialogueAudioSource = dialoguePlayer.GetComponent<AudioSource>();
-        dialogueAudioSource.clip = panelAudioClip;
-        dialogueAudioSource.PlayDelayed(0.1f);
+        if (panelAudioClip != null){
+            dialogueAudioSource.clip = panelAudioClip;
+            dialogueAudioSource.PlayDelayed(0.1f);
+        }
+        
         
     }
 
@@ -44,15 +47,12 @@ public class UIPanelManager : MonoBehaviour
     }
 
     public void DeactivatePanel(){
-        dialogueAudioSource.Stop();
-        playerObject.PlayerNotUsingUI(true);
-        gameObject.SetActive(false); //this game object
+        
+        StartCoroutine(DeactivatePanelWithDelay());
     }
 
     public void LoadNextPanel(){
-        dialogueAudioSource.Stop();
-        nextPanel.SetActive(true);
-        gameObject.SetActive(false); //this game object
+        StartCoroutine(LoadNextPanelWithDelay());
     }
 
     void UpdateButtonText(){
@@ -61,5 +61,22 @@ public class UIPanelManager : MonoBehaviour
         } else{
             buttonText.text = buttonTextKey;
         }
+    }
+
+    private IEnumerator DeactivatePanelWithDelay()
+    {   
+        yield return new WaitForSeconds(0.2f);
+        dialogueAudioSource.Stop();
+        playerObject.PlayerNotUsingUI(true);
+        gameObject.SetActive(false); // This game object
+        
+    }
+
+    private IEnumerator LoadNextPanelWithDelay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        dialogueAudioSource.Stop();
+        nextPanel.SetActive(true);
+        gameObject.SetActive(false); //this game object
     }
 }

@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] AudioClip selectionRightSFX;
     [SerializeField] AudioClip selectionLeftSFX;
     [SerializeField] float sfxVolume = 1f;
-    int currentLevel;
+    public int currentLevel;
     int maxGateIndex = 7;
     List<string> allGates = new List<string> { "Buffer", "Not", "And","Nand", "Or", "Nor", "Xor", "Xnor" };
     public Image[] gateIcons;

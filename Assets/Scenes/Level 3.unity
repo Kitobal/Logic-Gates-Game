@@ -3196,6 +3196,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 3987237752227670342, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}
+    - target: {fileID: 1593543855758266552, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1904279175882060176, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+      propertyPath: dialoguePlayer
+      value: 
+      objectReference: {fileID: 167281947}
     - target: {fileID: 7313742810699135130, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
       propertyPath: m_fontSizeBase
       value: 40
@@ -3256,8 +3264,32 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 8246144503698313572, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+--- !u!1 &7313742810392225173 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7193475299673900378, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7313742810392225174 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6546255536979591321, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7313742810392225175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8244577667323092074, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7313742810392225176 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1593543855758266552, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7441893786650529206
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3331,9 +3363,29 @@ PrefabInstance:
       value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: npcPanel
+      value: 
+      objectReference: {fileID: 7313742810392225176}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
       propertyPath: startingPanel
       value: 
       objectReference: {fileID: 551196207}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[0]
+      value: 
+      objectReference: {fileID: 7313742810392225175}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[1]
+      value: 
+      objectReference: {fileID: 7313742810392225174}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[2]
+      value: 
+      objectReference: {fileID: 7313742810392225173}
     - target: {fileID: 7741170605235268171, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
       propertyPath: m_RootOrder
       value: 9
