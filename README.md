@@ -6,5 +6,6 @@ Nombro las variables, clases y objetos en ingles por que se me hece mas comodo.<
 Repo for a Logic Gates game i'll make for a university project. <br>
 I am using Unity Editor version 2021.3.14f1 because i've used this version before.<br>
 <br>Preview:<br>
-![image](https://github.com/user-attachments/assets/7f72e73e-2c1e-4e29-8231-6f25cf16fcda)
+![image](https://github.com/user-attachments/assets/c84c7b50-2e78-4452-b88e-2670d6ca8b71)
+
 
