@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GameSession : MonoBehaviour
 {
-    // to save the completed levels and recrods
+    public List<string> playerRecords = new List<string>();
     void Awake()
     {
         int numGameSessions = FindObjectsOfType<GameSession>().Length;
@@ -17,13 +17,8 @@ public class GameSession : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }    
-    void Start()
-    {
-        
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
+    
+    public void AddToPlayerRecords(string stringToAdd){
+        playerRecords.Add(stringToAdd);
     }
 }

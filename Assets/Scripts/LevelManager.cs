@@ -23,12 +23,17 @@ public class LevelManager : MonoBehaviour
     string yesInteractKeyString = "Interactuar<sprite name=\"Key_Space\">\nSeleccionar<sprite name=\"Key_C\">o<sprite name=\"Key_V\">";
     string  noInteractXboxString= "Seleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
     string yesInteractXboxString = "Interactuar<sprite name=\"Xbox_A\">\nSeleccionar<sprite name=\"Xbox_X\">o<sprite name=\"Xbox_Y\">";
-    
+    [SerializeField] TextMeshProUGUI stopwatchText;
+    public int elapsedTime = 0;
+    bool timeRunning = false;
+
+    GameSession myGameSession;
     void Start()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
         UpdateUnlockedGates();
         levelTitle.text = "Nivel "+ currentLevel.ToString();
+        
     }
 
     // Update is called once per frame
@@ -99,4 +104,33 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
+
+    private IEnumerator UpdateStopwatch(){
+        while(timeRunning){
+            yield return new WaitForSeconds(1f);
+            elapsedTime += 1;
+            stopwatchText.text = elapsedTime.ToString();
+        }
+    }
+
+    public void StartStopwatch(){
+        if (!timeRunning){
+            timeRunning = true;
+            StartCoroutine(UpdateStopwatch());
+        }
+    }
+
+    public void StopStopwatch(){
+        if (timeRunning){
+            timeRunning = false;
+            StopCoroutine(UpdateStopwatch());
+        }
+    }
+
+    public void AddRecord(){
+        myGameSession = FindObjectOfType<GameSession>();
+        string toBeAdded = "Nivel "+currentLevel.ToString()+" : "+(elapsedTime+1).ToString();
+        myGameSession.AddToPlayerRecords(toBeAdded);
+    }
+
 }

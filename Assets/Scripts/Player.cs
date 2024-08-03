@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float moveSpeed = 3f;
 
 
     Animator playerAnimator;
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
     public String selectedGate;
     LevelManager myLevelManager;
 
-    public bool canMove = true;
+    public bool canMove = false;
     public bool canInteract = true;
     
     public bool canSelect = true;

@@ -17,12 +17,14 @@ public class Door : MonoBehaviour
 
     Player playerObject;
     Npc npcObject;
+    LevelManager myLevelManager;
     void Start()
     {
         myAnimator = GetComponent<Animator>();
         myCollider = GetComponent<BoxCollider2D>();
         playerObject = FindObjectOfType<Player>();
         npcObject = FindObjectOfType<Npc>();
+        myLevelManager = FindObjectOfType<LevelManager>();
         CheckOutput();
     }
 
@@ -40,12 +42,14 @@ public class Door : MonoBehaviour
             finalOutput = input.GetComponent<Output>().output;
             if (finalOutput != null){
                 if (finalOutput == true){
+                myLevelManager.StopStopwatch(); //stop the clock
                 myAnimator.SetBool("isOpen",true);
                 myCollider.enabled = false;
                 doorLight.GetComponent<SpriteRenderer>().sprite = lightOn;
                 playerObject.SetCanInteract(false);
                 AudioSource.PlayClipAtPoint(doorSFX, Camera.main.transform.position,sfxVolume);
                 npcObject.ChangeSprite();   
+                myLevelManager.AddRecord();
                 } else {
                 myAnimator.SetBool("isOpen",false);
                 myCollider.enabled = true;

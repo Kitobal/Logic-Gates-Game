@@ -24,11 +24,14 @@ public class UIPanelManager : MonoBehaviour
     TextMeshProUGUI buttonText;
     string buttonTextXbox = "<sprite name=\"Xbox_A\">Continuar";
     string buttonTextKey = "<sprite name=\"Key_Space\">Continuar";
+
+    LevelManager myLevelManager;
     
     void Start()
     {
         playerObject = FindObjectOfType<Player>();
         playerObject.PlayerNotUsingUI(false);
+        myLevelManager = FindObjectOfType<LevelManager>();
         EventSystem.current.SetSelectedGameObject(startingButton);
         buttonText = startingButton.GetComponentInChildren<TextMeshProUGUI>();
         dialogueAudioSource = dialoguePlayer.GetComponent<AudioSource>();
@@ -69,7 +72,7 @@ public class UIPanelManager : MonoBehaviour
         dialogueAudioSource.Stop();
         playerObject.PlayerNotUsingUI(true);
         gameObject.SetActive(false); // This game object
-        
+        myLevelManager.StartStopwatch(); //start the stopwatch
     }
 
     private IEnumerator LoadNextPanelWithDelay()
