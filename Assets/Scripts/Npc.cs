@@ -12,6 +12,8 @@ public class Npc : MonoBehaviour
     [SerializeField] GameObject startingPanel;
     [SerializeField] GameObject npcPanel;
     public GameObject[] gateSections;
+    public AudioClip[] npcCheers;
+    [SerializeField] float sfxVolume = 1f;
 
     SpriteRenderer mySpriteRenderer;
 
@@ -28,7 +30,6 @@ public class Npc : MonoBehaviour
         mySpriteRenderer = GetComponent<SpriteRenderer>();
         myLevelManager = FindObjectOfType<LevelManager>();
         playerObject = FindObjectOfType<Player>();
-        
     }
 
     // Update is called once per frame
@@ -37,8 +38,8 @@ public class Npc : MonoBehaviour
         
     }
 
-    public void ChangeSprite(){
-        mySpriteRenderer.sprite = happySprite;
+    public void Cheer(){
+        StartCoroutine(WaitAndPlayRandomCheer());
     }
 
     public void LoadPanel(){
@@ -59,6 +60,13 @@ public class Npc : MonoBehaviour
             }
         }
 
+    }
+
+    private IEnumerator WaitAndPlayRandomCheer(){
+        yield return new WaitForSeconds(0.5f);
+        mySpriteRenderer.sprite = happySprite;
+        int randomNumber = Random.Range(0,npcCheers.Length);
+        AudioSource.PlayClipAtPoint(npcCheers[randomNumber], Camera.main.transform.position,sfxVolume);
     }
 
     

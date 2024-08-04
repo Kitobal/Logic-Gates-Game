@@ -26,7 +26,13 @@ public class SceneLoader : MonoBehaviour
     }
 
     private IEnumerator WaitAndLoadNextScene(){
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(nextScene);
+    }
+
+    public void LoadMainMenu(){
+        GameSession myGameSession = FindObjectOfType<GameSession>();
+        Destroy(myGameSession.GameObject());
+        SceneManager.LoadScene(0);
     }
 }

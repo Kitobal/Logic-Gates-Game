@@ -48,7 +48,7 @@ public class Door : MonoBehaviour
                 doorLight.GetComponent<SpriteRenderer>().sprite = lightOn;
                 playerObject.SetCanInteract(false);
                 AudioSource.PlayClipAtPoint(doorSFX, Camera.main.transform.position,sfxVolume);
-                npcObject.ChangeSprite();   
+                npcObject.Cheer();   
                 myLevelManager.AddRecord();
                 } else {
                 myAnimator.SetBool("isOpen",false);

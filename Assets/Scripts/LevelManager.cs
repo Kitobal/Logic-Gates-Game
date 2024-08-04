@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] AudioClip selectionLeftSFX;
     [SerializeField] float sfxVolume = 1f;
     public int currentLevel;
-    int maxGateIndex = 7;
+    int maxGateIndex;
     List<string> allGates = new List<string> { "Buffer", "Not", "And","Nand", "Or", "Nor", "Xor", "Xnor" };
     public Image[] gateIcons;
     public Image[] selectedFrames;
@@ -31,9 +31,9 @@ public class LevelManager : MonoBehaviour
     void Start()
     {
         currentLevel = SceneManager.GetActiveScene().buildIndex;
-        UpdateUnlockedGates();
+        maxGateIndex = currentLevel -1;
         levelTitle.text = "Nivel "+ currentLevel.ToString();
-        
+        UpdateUnlockedGates();
     }
 
     // Update is called once per frame
@@ -129,7 +129,7 @@ public class LevelManager : MonoBehaviour
 
     public void AddRecord(){
         myGameSession = FindObjectOfType<GameSession>();
-        string toBeAdded = "Nivel "+currentLevel.ToString()+" : "+(elapsedTime+1).ToString();
+        string toBeAdded = "Nivel "+currentLevel.ToString()+": "+(elapsedTime+1).ToString()+" segundos";
         myGameSession.AddToPlayerRecords(toBeAdded);
     }
 
