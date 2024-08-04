@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -16,11 +17,16 @@ public class SceneLoader : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.layer == 6 ){
-            SceneManager.LoadScene(nextScene);
+            StartCoroutine(WaitAndLoadNextScene());
         }
     }
 
     public void LoadNextScene(){ //to be used later on main menu
+        StartCoroutine(WaitAndLoadNextScene());
+    }
+
+    private IEnumerator WaitAndLoadNextScene(){
+        yield return new WaitForSeconds(0.2f);
         SceneManager.LoadScene(nextScene);
     }
 }

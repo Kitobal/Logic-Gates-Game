@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     
     public bool canSelect = true;
     Npc myNpc;
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
