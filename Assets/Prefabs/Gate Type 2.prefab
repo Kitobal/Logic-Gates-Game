@@ -103,6 +103,7 @@ MonoBehaviour:
   inputObjectB: {fileID: 0}
   defaultSprite: {fileID: -759007896, guid: 9923986100da64b47a832359c90165cc, type: 3}
   andSprite: {fileID: 1735494315, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
+  nandSprite: {fileID: -1369925078, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
   gateSet: {fileID: 8300000, guid: b146af64a927a764eb2a8169901823b6, type: 3}
   gateRemove: {fileID: 8300000, guid: 1def5169217a24d4597cc874d710d96a, type: 3}
   wrongGateSFX: {fileID: 8300000, guid: f1822e52bc6a34a42a46a22869edd138, type: 3}
