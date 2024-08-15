@@ -9,6 +9,7 @@ public class GateType2 : MonoBehaviour
     [SerializeField] Sprite defaultSprite;
     [SerializeField] Sprite andSprite;
     [SerializeField] Sprite nandSprite;
+    [SerializeField] Sprite orSprite;
     [SerializeField] AudioClip gateSet;
     [SerializeField] AudioClip gateRemove;
     [SerializeField] AudioClip wrongGateSFX;
@@ -30,7 +31,7 @@ public class GateType2 : MonoBehaviour
     }
 
     public void SetActiveGate(string name){
-        if (name == "And" || name == "Nand"){  //other gates to be added here
+        if (name == "And" || name == "Nand" || name == "Or"){  //other gates to be added here
             activeGate = name;
             AudioSource.PlayClipAtPoint(gateSet, Camera.main.transform.position,sfxVolume);
         } else {
@@ -65,6 +66,16 @@ public class GateType2 : MonoBehaviour
                     myOutput.output = false;
                 } else {
                     myOutput.output = true; //else (at least one input is false)
+                }
+            } else if (activeGate == "Or"){
+                mySpriteRenderer.sprite = orSprite;
+                //Rules for OR gate
+                if (inputObjectA.GetComponent<Output>().output == null || inputObjectB.GetComponent<Output>().output == null){ // if there is a game object but it´s output is null
+                    myOutput.output = null;
+                } else if (inputObjectA.GetComponent<Output>().output == true || inputObjectB.GetComponent<Output>().output == true){ // if any output is true (and the other is not null)
+                    myOutput.output = true;
+                } else {
+                    myOutput.output = false; //else ( if both inputs ar false)
                 }
             }
         }
