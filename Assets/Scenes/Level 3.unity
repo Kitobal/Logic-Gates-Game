@@ -1222,6 +1222,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787880941}
   m_CullTransparentMesh: 1
+--- !u!1 &903818250 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1278468194777432657, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &903818251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7496921530195655903, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &903818252 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5804261112919744608, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &903818253 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7075852590309580568, guid: 4e6693b7043e4484680655493fbb702d, type: 3}
+  m_PrefabInstance: {fileID: 7313742810392225172}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &930684795 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1132794635819880911, guid: 67ff6c38a4330d746bdf194be66bf4ac, type: 3}
@@ -3346,7 +3366,7 @@ PrefabInstance:
       objectReference: {fileID: 551196207}
     - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
       propertyPath: gateSections.Array.size
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
       propertyPath: gateSections.Array.data[0]
@@ -3364,6 +3384,22 @@ PrefabInstance:
       propertyPath: gateSections.Array.data[3]
       value: 
       objectReference: {fileID: 7313742810392225177}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[4]
+      value: 
+      objectReference: {fileID: 903818253}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[5]
+      value: 
+      objectReference: {fileID: 903818252}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[6]
+      value: 
+      objectReference: {fileID: 903818251}
+    - target: {fileID: 7741170605235268170, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
+      propertyPath: gateSections.Array.data[7]
+      value: 
+      objectReference: {fileID: 903818250}
     - target: {fileID: 7741170605235268171, guid: ca2f2d6fcf318b843b5a00ab651c1315, type: 3}
       propertyPath: m_RootOrder
       value: 8
