@@ -12,7 +12,8 @@ public class GameOverManager : MonoBehaviour
     [SerializeField] GameObject mainButton;
     [SerializeField] TextMeshProUGUI buttonText;
 
-    public TextMeshProUGUI[] recordFields;
+    [SerializeField] TextMeshProUGUI recordsField;
+
 
     GameSession myGameSession;
     PlayerInput myPlayerInput;
@@ -49,8 +50,10 @@ public class GameOverManager : MonoBehaviour
     }
 
     void UpdatePlayerRecords(){
-         for (int i = 0; i <= playerRecords.Count -1; i++){
-            recordFields[i].text = playerRecords[i];
+        string recordsText = "";
+        for (int i = 0; i <= playerRecords.Count -1; i++){
+            recordsText = recordsText+playerRecords[i]+"\n";
         }
+        recordsField.text = recordsText;
     }
 }

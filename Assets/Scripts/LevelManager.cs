@@ -129,7 +129,7 @@ public class LevelManager : MonoBehaviour
 
     public void AddRecord(){
         myGameSession = FindObjectOfType<GameSession>();
-        string toBeAdded = "Nivel "+currentLevel.ToString()+": "+(elapsedTime+1).ToString()+" segundos";
+        string toBeAdded = "Nivel "+currentLevel.ToString()+":   "+(elapsedTime+1).ToString()+" segundos";
         myGameSession.AddToPlayerRecords(toBeAdded);
     }
 
