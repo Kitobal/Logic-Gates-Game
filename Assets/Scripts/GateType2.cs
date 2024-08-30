@@ -12,6 +12,7 @@ public class GateType2 : MonoBehaviour
     [SerializeField] Sprite orSprite;
     [SerializeField] Sprite norSprite;
     [SerializeField] Sprite xorSprite;
+    [SerializeField] Sprite xnorSprite;
     [SerializeField] AudioClip gateSet;
     [SerializeField] AudioClip gateRemove;
     [SerializeField] AudioClip wrongGateSFX;
@@ -33,7 +34,7 @@ public class GateType2 : MonoBehaviour
     }
 
     public void SetActiveGate(string name){
-        if (name == "And" || name == "Nand" || name == "Or" || name == "Nor" || name == "Xor"){  //other gates to be added here
+        if (name == "And" || name == "Nand" || name == "Or" || name == "Nor" || name == "Xor" || name == "Xnor"){
             activeGate = name;
             AudioSource.PlayClipAtPoint(gateSet, Camera.main.transform.position,sfxVolume);
         } else {
@@ -98,6 +99,16 @@ public class GateType2 : MonoBehaviour
                     myOutput.output = false;
                 } else {
                     myOutput.output = true; //else (both inputs are different)
+                }
+            } else if (activeGate == "Xnor"){
+                mySpriteRenderer.sprite = xnorSprite;
+                //Rules for XNOR gate
+                if (inputObjectA.GetComponent<Output>().output == null || inputObjectB.GetComponent<Output>().output == null){ // if there is a game object but it´s output is null
+                    myOutput.output = null;
+                } else if (inputObjectA.GetComponent<Output>().output == inputObjectB.GetComponent<Output>().output){ // if the outputs are the same (and not null)
+                    myOutput.output = true;
+                } else {
+                    myOutput.output = false; //else (both inputs are different)
                 }
             }
         }

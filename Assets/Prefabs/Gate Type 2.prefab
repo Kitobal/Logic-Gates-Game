@@ -107,6 +107,7 @@ MonoBehaviour:
   orSprite: {fileID: 982276082, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
   norSprite: {fileID: 1519705096, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
   xorSprite: {fileID: -567876115, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
+  xnorSprite: {fileID: -1687321642, guid: 16d0abbc561430940afbc0d27060b8a3, type: 3}
   gateSet: {fileID: 8300000, guid: b146af64a927a764eb2a8169901823b6, type: 3}
   gateRemove: {fileID: 8300000, guid: 1def5169217a24d4597cc874d710d96a, type: 3}
   wrongGateSFX: {fileID: 8300000, guid: f1822e52bc6a34a42a46a22869edd138, type: 3}
