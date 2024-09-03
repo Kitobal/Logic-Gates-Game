@@ -105,6 +105,7 @@ MonoBehaviour:
   bufferSprite: {fileID: -24517885, guid: c7b42267d529d584d89e82a2284d7a5e, type: 3}
   notSprite: {fileID: -1970388204, guid: c7b42267d529d584d89e82a2284d7a5e, type: 3}
   andSprite: {fileID: 297296244, guid: c7b42267d529d584d89e82a2284d7a5e, type: 3}
+  nandSprite: {fileID: -479401325, guid: c7b42267d529d584d89e82a2284d7a5e, type: 3}
 --- !u!114 &8949423728471839890
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,6 +10,7 @@ public class StaticGate : MonoBehaviour
     [SerializeField] Sprite bufferSprite;
     [SerializeField] Sprite notSprite;
     [SerializeField] Sprite andSprite;
+    [SerializeField] Sprite nandSprite;
     SpriteRenderer mySpriteRenderer;
     Output myOutput;
 
@@ -33,6 +34,8 @@ public class StaticGate : MonoBehaviour
             mySpriteRenderer.sprite = notSprite;
         } else if (gateName == "And"){
             mySpriteRenderer.sprite = andSprite;
+        } else if (gateName == "Nand"){
+            mySpriteRenderer.sprite = nandSprite;
         }
     }
 
@@ -56,6 +59,15 @@ public class StaticGate : MonoBehaviour
                 } else {
                     myOutput.output = false;
                 } 
-        }
+        } else if (gateName == "Nand"){
+                //Rules for Nand gate
+                if (inputObjectA.GetComponent<Output>().output == null || inputObjectB.GetComponent<Output>().output == null){ // if there is a game object but it´s output is null
+                    myOutput.output = null;
+                } else if (inputObjectA.GetComponent<Output>().output == true & inputObjectB.GetComponent<Output>().output == true){ // if both outputs are true
+                    myOutput.output = false;
+                } else {
+                    myOutput.output = true; //else (at least one input is false)
+                }
+            }
     }
 }
