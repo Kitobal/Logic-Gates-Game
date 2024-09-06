@@ -387,6 +387,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 965270518}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (11)
@@ -503,6 +507,7 @@ Transform:
   - {fileID: 139392787}
   - {fileID: 435275619}
   - {fileID: 383141442}
+  - {fileID: 1231186303}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -564,8 +569,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La compuerta NAND produce una salida falso (0) s\xF3lo si todas sus entradas
-    son verdadero (1), si no, produce una salida verdadero (1)"
+  m_text: "La compuerta NAND, en esta, la salida es falso (0) s\xF3lo si todas sus
+    entradas son verdadero (1) sino, la salida es verdadero (1)."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}
   m_sharedMaterial: {fileID: 3987237752227670342, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}
@@ -715,6 +720,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 965270518}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (13)
@@ -786,6 +795,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 965270518}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (12)
@@ -957,6 +970,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 352359876}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (7)
@@ -1018,13 +1035,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 965270518}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (8)
       objectReference: {fileID: 0}
     - target: {fileID: 5888203737555636803, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Size.x
-      value: 3
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_RootOrder
@@ -1032,7 +1053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.71
+      value: -3.51
       objectReference: {fileID: 0}
     - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1079,6 +1100,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1301628225}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (2)
@@ -1215,6 +1240,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1775744981}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (4)
@@ -1487,6 +1516,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1775744981}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (5)
@@ -1545,6 +1578,76 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
   m_PrefabInstance: {fileID: 1210723877}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1231186302
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 295487436}
+    m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 352359876}
+    - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_Name
+      value: Cable (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636803, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_Size.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.964
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.72
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.25728676
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+--- !u!4 &1231186303 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5888203737555636828, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+  m_PrefabInstance: {fileID: 1231186302}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1301628225 stripped
 GameObject:
@@ -1698,6 +1801,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 113359005}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (10)
@@ -1769,6 +1876,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 352359876}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (6)
@@ -1830,6 +1941,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1775744981}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (9)
@@ -2096,6 +2211,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1301628225}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (3)
@@ -2310,6 +2429,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1301628225}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (1)
@@ -2673,6 +2796,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1301628225}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable

@@ -608,7 +608,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 50}
+  m_AnchoredPosition: {x: 0, y: 68}
   m_SizeDelta: {x: 652, y: 234.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &307054234
@@ -631,8 +631,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "En la compuerta Buffer, la salida es id\xE9ntica a la entrada. Se utiliza
-    para amplificar la se\xF1al o aislar diferentes partes de un circuito."
+  m_text: "La compuerta Buffer, en ella, la salida es id\xE9ntica a la entrada, es
+    decir, si la entrada es verdadero (1) la salida ser\xE1 verdadero (1) y si la
+    entrada es falso (0), la salida tambi\xE9n ser\xE1 falso (0)."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}
   m_sharedMaterial: {fileID: 3987237752227670342, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}
@@ -833,6 +834,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 325144693}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (2)
@@ -2094,6 +2099,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 1498324983}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (4)
@@ -2183,7 +2192,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -173.73, y: 31.113916}
+  m_AnchoredPosition: {x: -173.73, y: 26}
   m_SizeDelta: {x: 187.46, y: 95.7721}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1121227706
@@ -2259,7 +2268,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 205}
+  m_AnchoredPosition: {x: 0, y: 209}
   m_SizeDelta: {x: 668.1, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131638810
@@ -3536,6 +3545,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 325144693}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (3)
@@ -3625,7 +3638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180.01, y: 33.367}
+  m_AnchoredPosition: {x: 180.01, y: 28.253078}
   m_SizeDelta: {x: 255.97, y: 100.2778}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1826171423
@@ -3749,6 +3762,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 325144693}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable (1)
@@ -4331,6 +4348,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 295487436}
     m_Modifications:
+    - target: {fileID: 4733147406322543772, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
+      propertyPath: inputObject
+      value: 
+      objectReference: {fileID: 325144693}
     - target: {fileID: 5888203737555636802, guid: 9404c5019ba720b4e963cba336bab9b7, type: 3}
       propertyPath: m_Name
       value: Cable

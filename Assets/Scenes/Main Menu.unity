@@ -5635,7 +5635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Versi\xF3n 0.8"
+  m_text: "Versi\xF3n 1.0"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}
   m_sharedMaterial: {fileID: 3987237752227670342, guid: 1c6d30a40cf24e54885e492742aa5909, type: 2}

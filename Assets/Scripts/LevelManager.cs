@@ -74,7 +74,9 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i <= maxGateIndex; i++){
             if (i == selectionIndex){
                 selectedFrames[i].enabled = true;
+                selectedFrames[i].gameObject.transform.GetChild(0).gameObject.SetActive(true);
             } else {
+                selectedFrames[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 selectedFrames[i].enabled = false;
             }
         }
@@ -85,9 +87,10 @@ public class LevelManager : MonoBehaviour
                 gateIcons[i].enabled = true;
             } else {
                 gateIcons[i].enabled = false;
+                selectedFrames[i].gameObject.transform.GetChild(0).gameObject.SetActive(false);
                 selectedFrames[i].enabled = false;
             }
-        }
+        } 
     }
     public void UpdateScreenPrompt(bool interact, string device){
         if (device == "Gamepad"){
